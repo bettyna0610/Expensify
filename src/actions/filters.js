@@ -1,5 +1,5 @@
 import selectExpenses from '../selectors/expenses'
-import { TestScheduler } from 'jest';
+
 
 
 export const setTextFilter = (text = '') => ({
