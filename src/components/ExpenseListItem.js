@@ -10,14 +10,15 @@ const ExpenseListItem = (props) => (
         {props.expenses.map( expense => {
             const link = `/edit/${expense.id}`
             return (
-                <div key={expense.id}>
-            <h3> <Link to={link}> {expense.description}</Link>  </h3> 
+                
+             <Link className="list-item" to={link}> <h3 className="list-item__title" >{expense.description}</h3>  
         <p> 
-            {numeral(expense.amount/100).format('$0,0.00')} 
+       <span className="list-item__sub-title" > {moment( expense.createdAt).format('MMMM Do, YYYY')}</span>
+            
             - 
-            {moment( expense.createdAt).format('MMMM Do, YYYY')}</p>
-        
-        </div>)})}
+            <h3 className="list-item__data">{numeral(expense.amount/100).format('$0,0.00')} </h3></p>
+             </Link>
+        )})}
     </div>
 )
 
