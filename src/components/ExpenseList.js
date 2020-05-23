@@ -7,8 +7,11 @@ const ExpenseList= (props) => (
     <div className="content-container">
         <div className="list-header">
             <div className="show-for-mobile">Expenses</div>
-        <div className="show-for-desktop">
+        <div id="expense" className="show-for-desktop">
             Expense
+            </div>
+            <div className="show-for-desktop">
+            Date
             </div>
             <div className="show-for-desktop">
             Amount
